@@ -33,6 +33,26 @@ export const Content = styled.div`
       }
     }
 
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-10%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    span {
+      animation: 300ms ease-out 0s 1 slideInFromLeft;
+      color: #ffacac;
+      align-self: flex-start;
+      margin-bottom: 10px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
     button {
       background-color: #3b9eff;
       border-radius: 4px;
