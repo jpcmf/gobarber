@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
+  animation: 1s ease-out 0s 1 slideInFromLeft;
   max-width: 315px;
   text-align: center;
   width: 100%;
