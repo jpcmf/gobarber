@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Notifications from '../Notifications';
+
 import { ReactComponent as LogoGoBarber } from '../../assets/logo-roxa.svg';
 import { Container, Content, Profile } from './styles';
 
@@ -13,6 +15,7 @@ export default function Header() {
           <Link to="/dashboard">Dashboard</Link>
         </nav>
         <aside>
+          <Notifications />
           <Profile>
             <div>
               <strong>João Paulo Fricks</strong>
