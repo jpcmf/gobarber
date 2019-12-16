@@ -36,6 +36,7 @@ export const NotificationList = styled.ul`
   position: absolute;
   top: calc(100% + 30px);
   width: 260px;
+  display: ${props => (props.visible ? 'block' : 'none')}
 
   &:before {
     border-bottom: 20px solid rgba(0, 0, 0, 0.6);
@@ -70,18 +71,17 @@ export const Notification = styled.li`
   }
 
   time {
+    display: block;
     font-size: 12px;
+    margin-bottom: 5px;
     opacity: 0.6;
   }
 
   button {
     background: none;
-    border-left: solid 1px rgba(255, 255, 255, 0.1);
     border: 0;
     color: ${lighten(0.2, '#7159c1')};
     font-size: 12px;
-    margin: 0 5px;
-    padding: 0 5px;
   }
 
   ${props =>
@@ -93,6 +93,7 @@ export const Notification = styled.li`
         content: '';
         display: inline-block;
         height: 6px;
+        margin-left: 10px;
         width: 6px;
       }
     `}
