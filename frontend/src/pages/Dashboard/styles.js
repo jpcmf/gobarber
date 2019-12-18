@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -28,6 +38,20 @@ export const Container = styled.div`
     grid-gap: 15px;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 30px;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+
+    svg {
+      animation: ${rotate} 1s linear infinite;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+    }
   }
 `;
 

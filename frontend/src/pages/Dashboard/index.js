@@ -15,6 +15,7 @@ import { utcToZonedTime } from 'date-fns-tz';
 import pt from 'date-fns/locale/pt';
 
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import { AiOutlineLoading } from 'react-icons/ai';
 import api from '../../services/api';
 
 import { Container, Time } from './styles';
@@ -22,6 +23,7 @@ import { Container, Time } from './styles';
 const range = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 export default function Dashboard() {
+  const [loading, setLoading] = useState(false);
   const [date, setDate] = useState(new Date());
   const [schedule, setSchedule] = useState([]);
 
@@ -32,6 +34,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     async function loadSchedule() {
+      setLoading(true);
       const response = await api.get('schedule', {
         params: { date },
       });
@@ -56,6 +59,7 @@ export default function Dashboard() {
       });
 
       setSchedule(data);
+      setLoading(false);
     }
     loadSchedule();
   }, [date]);
@@ -79,16 +83,26 @@ export default function Dashboard() {
           <MdChevronRight size={36} color="#fff" />
         </button>
       </header>
-      <ul>
-        {schedule.map(time => (
-          <Time key={time.time} past={time.past} available={!time.appointment}>
-            <strong>{time.time}</strong>
-            <span>
-              {time.appointment ? time.appointment.user.name : 'Em aberto'}
-            </span>
-          </Time>
-        ))}
-      </ul>
+      {loading ? (
+        <div>
+          <AiOutlineLoading />
+        </div>
+      ) : (
+        <ul>
+          {schedule.map(time => (
+            <Time
+              key={time.time}
+              past={time.past}
+              available={!time.appointment}
+            >
+              <strong>{time.time}</strong>
+              <span>
+                {time.appointment ? time.appointment.user.name : 'Em aberto'}
+              </span>
+            </Time>
+          ))}
+        </ul>
+      )}
     </Container>
   );
 }
