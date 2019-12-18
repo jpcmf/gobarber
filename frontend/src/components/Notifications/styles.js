@@ -36,7 +36,8 @@ export const NotificationList = styled.ul`
   position: absolute;
   top: calc(100% + 30px);
   width: 260px;
-  display: ${props => (props.visible ? 'block' : 'none')}
+  display: ${props => (props.visible ? 'block' : 'none')};
+  z-index: 1;
 
   &:before {
     border-bottom: 20px solid rgba(0, 0, 0, 0.6);
