@@ -6,6 +6,7 @@ import {
   setHours,
   setMinutes,
   setSeconds,
+  setMilliseconds,
   isBefore,
   isEqual,
   parseISO,
@@ -35,12 +36,14 @@ export default function Dashboard() {
         params: { date },
       });
 
-      // const dt = response.data.find(a => {});
-
       const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
       const data = range.map(hour => {
-        const checkDate = setSeconds(setMinutes(setHours(date, hour), 0), 0);
+        const checkDate = setMilliseconds(
+          setSeconds(setMinutes(setHours(date, hour), 0), 0),
+          0
+        );
+        console.tron.log('date', checkDate);
         const compareDate = utcToZonedTime(checkDate, timezone);
 
         return {
@@ -51,8 +54,6 @@ export default function Dashboard() {
           ),
         };
       });
-
-      console.tron.log('...', data);
 
       setSchedule(data);
     }
