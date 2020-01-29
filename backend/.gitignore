@@ -1,4 +1,7 @@
-.env
-.vscode
-/node_modules
 .DS_Store
+.vscode
+
+.env
+/node_modules
+/tmp/uploads/*
+!tmp/uploads/.gitkeep
