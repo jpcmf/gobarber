@@ -44,9 +44,8 @@ export function* signUp({ payload }) {
       name,
       email,
       password,
-      provider: true,
     });
-    Alert.alert('Conta criada com sucesso.', 'Usuário e senha não conferem.');
+    Alert.alert('Parabéns!', 'Conta criada com sucesso.');
     // history.push('/');
   } catch (error) {
     Alert.alert('Falha no cadastro.', 'Verifique seus dados.');
