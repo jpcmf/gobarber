@@ -46,7 +46,7 @@ export default function Dashboard() {
           setSeconds(setMinutes(setHours(date, hour), 0), 0),
           0
         );
-        console.tron.log('date', checkDate);
+
         const compareDate = utcToZonedTime(checkDate, timezone);
 
         return {
