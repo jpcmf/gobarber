@@ -11,7 +11,7 @@
 <p align="center">
   <a href="#coffee-back-end">Back-end</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-front-end">Front-end</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#iphone-mobile">Mobile</a>
+  <a href="#iphone-mobile">Mobile</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
 
@@ -21,9 +21,13 @@ The project requires [Node.js](https://nodejs.org/) to run locally.
 
 ## :coffee: Back-end
 
+```bash
+...
+```
+
 ## :computer: Front-end
 
-After clone the repository go to the folder `frontend` and install the dependencies.
+After clone the repository go to the folder `frontend` and install the dependencies and run the project with the command `npm start`.
 
 ```bash
 # install dependencies
@@ -36,6 +40,10 @@ npm start
 ```
 
 ## :iphone: Mobile
+
+```bash
+...
+```
 
 # :memo: License
 
