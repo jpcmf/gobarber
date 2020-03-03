@@ -8,8 +8,6 @@ import './config/ReactotronConfig';
 import { store, persistor } from './store';
 import App from './App';
 
-console.tron.log('opa');
-
 export default function Index() {
   return (
     <Provider store={store}>
