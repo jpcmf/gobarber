@@ -21,6 +21,10 @@ The project requires [Node.js](https://nodejs.org/) to run locally.
 
 ## :coffee: Back-end
 
+```bash
+...
+```
+
 ## :computer: Front-end
 
 After clone the repository go to the folder `frontend` and install the dependencies and run the project with the command `npm start`.
@@ -36,6 +40,10 @@ npm start
 ```
 
 ## :iphone: Mobile
+
+```bash
+...
+```
 
 # :memo: License
 
