@@ -23,6 +23,7 @@ export const Provider = styled(RectButton)`
 `;
 
 export const Avatar = styled.Image`
+  background-color: #f1f1f1;
   border-radius: 25px;
   height: 50px;
   width: 50px;

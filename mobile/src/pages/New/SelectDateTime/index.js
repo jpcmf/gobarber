@@ -58,7 +58,7 @@ export default function SelectDateTime({ navigation }) {
 }
 
 SelectDateTime.navigationOptions = ({ navigation }) => ({
-  title: 'Selecione o horário',
+  title: 'Selecione a data e o horário',
   headerLeft: () => (
     <TouchableOpacity
       onPress={() => {
