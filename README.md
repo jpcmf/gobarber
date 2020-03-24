@@ -110,8 +110,18 @@ npm start
 
 ## :iphone: Mobile
 
+After clone the repository go to the folder `mobile` and install the dependencies and run the project with the command `react-native run-ios`.
+
+Note: The version of mobile app was development for `iOS`. You need the Xcode client in your computer to run the application in the simulator or configure to use the app via USB. There is another options to run the app, for i.e. [Expo](https://expo.io/learn).
+
 ```bash
-...
+# install dependencies
+npm install
+```
+
+```bash
+# run react-native
+react-native run-ios
 ```
 
 # :memo: License
