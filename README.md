@@ -17,11 +17,11 @@
 
 # Build Setup
 
-The project requires [Node.js](https://nodejs.org/) to run locally.
+The project requires [Node.js](https://nodejs.org/) and [Docker](https://docs.docker.com/install/) to run locally.
 
 ## :coffee: Back-end
 
-After clone the repository go to the folder `backend` and install the dependencies.
+After clone the repository go to the `backend` folder and install the dependencies.
 
 ```bash
 # install dependencies
@@ -38,7 +38,7 @@ docker start database
 
 ### access the Postgres database
 
-You need create a new database called `gobarber`. I suggest you to use the [Postbird](https://www.electronjs.org/apps/postbird) for OSX. After install you need set the configuration bellow and the create your database with `UTF8` client encoding.
+You need create a new database called `gobarber`. I suggest you to use the [Postbird](https://www.electronjs.org/apps/postbird) for OSX. After install you need set the configuration bellow and then create your database with `UTF8` client encoding.
 
 ```bash
 # host
@@ -96,7 +96,7 @@ npm run queue
 
 ## :computer: Front-end
 
-After clone the repository go to the folder `frontend` and install the dependencies and run the project with the command `npm start`.
+After clone the repository go to the `frontend` folder and install the dependencies and run the project with the command `npm start`.
 
 ```bash
 # install dependencies
@@ -110,7 +110,7 @@ npm start
 
 ## :iphone: Mobile
 
-After clone the repository go to the folder `mobile` and install the dependencies and run the project with the command `react-native run-ios`.
+After clone the repository go to the `mobile` folder and install the dependencies and run the project with the command `react-native run-ios`.
 
 Note: The version of mobile app was development for `iOS`. You need the Xcode client in your computer to run the application in the simulator or configure to use the app via USB. There is another options to run the app, for i.e. [Expo](https://expo.io/learn).
 
